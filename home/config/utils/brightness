@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+# Get active brightness
+brightness=$(xrandr --verbose --current | grep 'Brightness' | head -n1 | awk '{print $2}')
+
+# Get active monitors
+arr=$(xrandr --listactivemonitors | awk 'NR>1{print $4 }')
+
+# For each active monitor
+for monitor in $arr; do
+
+	# If first argument is plus
+	if [[ $1 = "+" ]] && [[ $brightness < 1 ]]; then
+
+		# Calculate new brightness
+		new_brightness=$(echo "0.1 + $brightness" | bc)
+
+	elif [[ $1 = "-" ]] && [[ $brightness > 0.4 ]]; then
+
+		# Calculate new brightness
+		new_brightness=$(echo "$brightness - 0.1" | bc)
+	fi
+
+	# Set new brightness
+	if [[ $new_brightness ]]; then
+		xrandr --output $monitor --brightness $new_brightness
+	fi
+
+	# If need to set brightness manually
+	if [[ $1 = "=" ]]; then
+
+		# Set new brightness
+		xrandr --output $monitor --brightness $2
+	fi
+done

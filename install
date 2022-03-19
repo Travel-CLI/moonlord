@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sudo pacman -Sy openbox feh urxvt-perls xorg-xrandr xorg-server xorg-fonts xorg-xinit menumaker lxapperarance-obconf-gtk3 obconf ttf-dejavu polkit
