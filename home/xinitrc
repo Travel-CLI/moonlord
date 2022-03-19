@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# First display
+DISPLAY=:0.1
+exec openbox & 
+
+# Second display
+DISPLAY=:0.0
+exec openbox-session
