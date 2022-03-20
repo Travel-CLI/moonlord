@@ -7,3 +7,4 @@
 
 
 Dotfiles for my system
+<img src="https://raw.githubusercontent.com/crckhd/dots/main/screen.png" alt=""/>
