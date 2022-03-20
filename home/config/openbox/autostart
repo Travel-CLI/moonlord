@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+feh --bg-scale $HOME/Pictures/Wallpaper/pink-cat.png

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
-# Linking files
 ln -sf $PWD/home/xinitrc $HOME/.xinitrc
+ln -sf $PWD/home/config/openbox $HOME/.config/
+ln -sf $PWD/home/config/utils $HOME/.config/
+ln -sf $PWD/home/config/nvim $HOME/.config/
+ln -sf $PWD/home/config/rofi $HOME/.config/
