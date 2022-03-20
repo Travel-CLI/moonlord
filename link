@@ -4,6 +4,7 @@ ln -sf $PWD/home/xinitrc $HOME/.xinitrc
 ln -sf $PWD/home/tmux.conf $HOME/.tmux.conf
 ln -sf $PWD/home/Xresources $HOME/.Xresources
 ln -sf $PWD/home/config/openbox $HOME/.config/
+ln -sf $PWD/home/config/polybar $HOME/.config/
 ln -sf $PWD/home/config/rofi $HOME/.config/
 ln -sf $PWD/home/config/utils $HOME/.config/
 ln -sf $PWD/home/config/nvim $HOME/.config/
