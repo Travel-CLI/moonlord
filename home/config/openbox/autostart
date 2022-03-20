@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
+# Set wallpaper
 feh --bg-scale $HOME/Pictures/Wallpaper/pink-cat.png
+
+# Set Xresources
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources

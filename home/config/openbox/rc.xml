@@ -176,6 +176,26 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
+
+    <!-- User-defined hotkeys -->
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Brightness Down!</name>
+        </startupnotify>
+	<command>~/.config/utils/brightness -</command>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Brightness Up!</name>
+        </startupnotify>
+	<command>~/.config/utils/brightness +</command>
+      </action>
+    </keybind>
     <!-- Keybindings for desktop switching -->
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
