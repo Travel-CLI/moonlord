@@ -1,0 +1,71 @@
+* {
+    black2: #1E1E2E;
+    black3: #302D41;
+    white:  #D9E0EE;
+    gray2:  #C3BAC6;
+    sky:    #89DCEB;
+}
+
+window {
+	border: 5px;
+	border-color: @black3;
+}
+
+// Main box of the view {{{
+mainbox {
+	padding: 24px 32px 26px;
+	background-color: @black2;
+}
+// }}}
+
+// Input {{{
+inputbar {
+	spacing: 12px;
+	background-color: inherit;
+	children: [entry];
+}
+
+entry {
+	placeholder: "Enter app name";
+	text-color: @white;
+	padding: 12px 24px;
+	background-color: @black3;
+	border-radius: 4px;
+	margin: 0 0 24px 0;
+}
+// }}}
+
+// Elements {{{
+listview {
+	lines: 4;
+	spacing: 22px;
+	background-color: inherit;
+}
+
+element {
+	background-color: @black3;
+	padding: 10px 24px;
+	border-radius: 4px;
+	text-color: @white;
+}
+
+element selected {
+	background-color: @sky;
+	text-color: @black3;
+}
+
+element-text, element-icon {
+	background-color: inherit;
+	text-color: inherit;
+}
+
+
+element-icon {
+	size: 24px;
+	margin: 0 12px 0 0;
+}
+// }}}
+
+mode-switcher {
+	enabled: false;
+}

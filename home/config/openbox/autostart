@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
 # Set wallpaper
-feh --bg-scale $HOME/Pictures/Wallpaper/pink-cat.png
+feh --bg-scale $HOME/Pictures/Wallpaper/pink-cat.png &
 
 # Set Xresources
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+
+# Keyboard extras
+# Change language and swap escape with caps lock
+setxkbmap -model pc105 -layout us,ru -option caps:swapescape,grp:win_space_toggle

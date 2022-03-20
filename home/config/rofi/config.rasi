@@ -1,0 +1,11 @@
+configuration {
+    font: "Iosevka 16";
+    show-icons: true;
+    terminal: "urxvt";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    sidebar-mode: false;
+}
+
+@theme "catpuccin_one_prompt"

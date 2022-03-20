@@ -196,6 +196,20 @@
 	<command>~/.config/utils/brightness +</command>
       </action>
     </keybind>
+
+    <!-- Show terminal -->
+    <keybind key="C-A-t">
+      <action name="Execute">
+	<command>urxvt</command>
+      </action>
+    </keybind>
+
+    <!-- Show rofi -->
+    <keybind key="W-p">
+      <action name="Execute">
+	<command>rofi -show drun</command>
+      </action>
+    </keybind>
     <!-- Keybindings for desktop switching -->
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
