@@ -178,6 +178,11 @@
     <chainQuitKey>C-g</chainQuitKey>
 
     <!-- User-defined hotkeys -->
+    <keybind key="A-m">
+      <action name="Execute">
+	<command>amixer -c 0 sset Mic toggle</command>
+      </action>
+    </keybind>
     <keybind key="XF86MonBrightnessDown">
       <action name="Execute">
         <startupnotify>
@@ -194,6 +199,23 @@
           <name>Brightness Up!</name>
         </startupnotify>
 	<command>~/.config/utils/brightness +</command>
+      </action>
+    </keybind>
+      
+      <!-- Volume -->
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute">
+	<command>pactl set-sink-volume 0 +5%</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+	<command>pactl set-sink-volume 0 -5%</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute">
+	<command>pactl set-sink-mute 0 toggle</command>
       </action>
     </keybind>
 
@@ -375,6 +397,9 @@
       <mousebind button="A-Left" action="Press">
         <action name="Focus"/>
         <action name="Raise"/>
+      </mousebind>
+      <mousebind button="A-Left" action="DoubleClick">
+	<action name="ToggleMaximize"/>            
       </mousebind>
       <mousebind button="A-Left" action="Click">
         <action name="Unshade"/>
@@ -719,6 +744,12 @@
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
   <applications>
+
+    <!-- Turn off decorations -->
+    <application class="*">
+      <decor>no</decor>
+    </application>
+
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
