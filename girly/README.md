@@ -1,4 +1,4 @@
-# DOTS
+# Arch Linux Rice
 
 <div style="display: flex;">
   <img src="https://img.shields.io/github/license/crckhd/dots?color=%23F5E0DC&label=L&style=for-the-badge" align="center" alt="License">
@@ -7,4 +7,4 @@
 
 
 Dotfiles for my system
-<img src="https://raw.githubusercontent.com/crckhd/dots/main/screen.png" alt=""/>
+<img src="https://raw.githubusercontent.com/crckhd/dots/main/girly/screen.png" alt=""/>
