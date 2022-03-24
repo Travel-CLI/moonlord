@@ -12,16 +12,15 @@ UXTerm.ttyModes: erase ^?
 UXTerm.vt100.saveLines: 4096
 UXTerm.vt100.scrollbar: false
 
-! Selection
-UXTerm.vt100.trimSelection: true
-
 ! Clipboard
 UXTerm*VT100.Translations: #override \
 		Ctrl Shift <Key>V:    insert-selection(SELECT) \n\
 		Ctrl Shift <Key>C:    copy-selection(SELECT)
 
+! Selection
+UXTerm.vt100.trimSelection: true
+
 ! Bell
-UXTerm.vt100.visualBell: true
 UXTerm.vt100.bellIsUrgent: true
 
 ! Fonts
