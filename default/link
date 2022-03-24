@@ -4,6 +4,6 @@
 ln -sf $PWD/nvim $HOME/.config/
 
 # Link some programs (files)
-ln -sf $PWD/Xresources/Xresouces $HOME/.Xresources
+ln -sf $PWD/Xresources/Xresources $HOME/.Xresources
 ln -sf $PWD/Xresources/settings.json $HOME/.cache/Code/User/settings.json
 ln -sf $PWD/tmux/tmux.conf $HOME/.tmux.conf
