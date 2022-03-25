@@ -69,44 +69,69 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["feline.nvim"] = {
-    config = { "\27LJ\2\0024\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vfeline\frequire\0" },
+  ["gruvbox-flat.nvim"] = {
+    config = { "\27LJ\2\2<\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0\29colorscheme gruvbox-flat\bcmd\bvim\0" },
     loaded = true,
-    path = "/home/crckhd/.local/share/nvim/site/pack/packer/start/feline.nvim",
-    url = "https://github.com/feline-nvim/feline.nvim"
+    path = "/home/crckhd/.local/share/nvim/site/pack/packer/start/gruvbox-flat.nvim",
+    url = "https://github.com/eddyekofo94/gruvbox-flat.nvim"
   },
-  ["nvim-treesitter"] = {
-    config = { "\27LJ\2\2¶\1\0\0\3\0\6\0\t6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0005\2\4\0=\2\5\1B\0\2\1K\0\1\0\14highlight\1\0\2&additional_vim_regex_highlighting\1\venable\2\1\0\2\17sync_install\1\21ensure_installed\15maintained\nsetup\28nvim-treesitter.configs\frequire\0" },
+  ["lualine.nvim"] = {
+    config = { "\27LJ\2\2Œ\2\0\0\4\0\v\0\0156\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\t\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\0024\3\0\0=\3\b\2=\2\n\1B\0\2\1K\0\1\0\foptions\1\0\0\23disabled_filetypes\23section_separators\1\0\2\tleft\bî‚°\nright\bî‚²\25component_separators\1\0\2\tleft\bî‚±\nright\bî‚³\1\0\4\17globalstatus\1\25always_divide_middle\2\ntheme\tauto\18icons_enabled\2\nsetup\flualine\frequire\0" },
     loaded = true,
-    path = "/home/crckhd/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
-    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+    path = "/home/crckhd/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["nvim-tree.lua"] = {
+    config = { "\27LJ\2\2;\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0" },
+    loaded = true,
+    path = "/home/crckhd/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/crckhd/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/crckhd/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ["rose-pine"] = {
-    config = { "\27LJ\2\2~\0\0\2\0\a\0\v6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\0016\0\4\0009\0\5\0'\1\6\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\1\0\1\17dark_variant\tmoon\nsetup\14rose-pine\frequire\0" },
+  ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/crckhd/.local/share/nvim/site/pack/packer/start/rose-pine",
-    url = "https://github.com/rose-pine/neovim"
+    path = "/home/crckhd/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["telescope.nvim"] = {
+    config = { "\27LJ\2\2Œ\1\0\0\5\0\n\0\r6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\b\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2=\2\t\1B\0\2\1K\0\1\0\rdefaults\1\0\0\18layout_config\1\0\0\rvertical\1\0\0\1\0\1\nwidth\4\0€€€ÿ\3\nsetup\14telescope\frequire\0" },
+    loaded = true,
+    path = "/home/crckhd/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-polyglot"] = {
+    loaded = true,
+    path = "/home/crckhd/.local/share/nvim/site/pack/packer/start/vim-polyglot",
+    url = "https://github.com/sheerun/vim-polyglot"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-try_loadstring("\27LJ\2\2¶\1\0\0\3\0\6\0\t6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0005\2\4\0=\2\5\1B\0\2\1K\0\1\0\14highlight\1\0\2&additional_vim_regex_highlighting\1\venable\2\1\0\2\17sync_install\1\21ensure_installed\15maintained\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
-time([[Config for nvim-treesitter]], false)
--- Config for: feline.nvim
-time([[Config for feline.nvim]], true)
-try_loadstring("\27LJ\2\0024\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vfeline\frequire\0", "config", "feline.nvim")
-time([[Config for feline.nvim]], false)
--- Config for: rose-pine
-time([[Config for rose-pine]], true)
-try_loadstring("\27LJ\2\2~\0\0\2\0\a\0\v6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\0016\0\4\0009\0\5\0'\1\6\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\1\0\1\17dark_variant\tmoon\nsetup\14rose-pine\frequire\0", "config", "rose-pine")
-time([[Config for rose-pine]], false)
+-- Config for: gruvbox-flat.nvim
+time([[Config for gruvbox-flat.nvim]], true)
+try_loadstring("\27LJ\2\2<\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0\29colorscheme gruvbox-flat\bcmd\bvim\0", "config", "gruvbox-flat.nvim")
+time([[Config for gruvbox-flat.nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+try_loadstring("\27LJ\2\2Œ\1\0\0\5\0\n\0\r6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\b\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2=\2\t\1B\0\2\1K\0\1\0\rdefaults\1\0\0\18layout_config\1\0\0\rvertical\1\0\0\1\0\1\nwidth\4\0€€€ÿ\3\nsetup\14telescope\frequire\0", "config", "telescope.nvim")
+time([[Config for telescope.nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+try_loadstring("\27LJ\2\2Œ\2\0\0\4\0\v\0\0156\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\t\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\0024\3\0\0=\3\b\2=\2\n\1B\0\2\1K\0\1\0\foptions\1\0\0\23disabled_filetypes\23section_separators\1\0\2\tleft\bî‚°\nright\bî‚²\25component_separators\1\0\2\tleft\bî‚±\nright\bî‚³\1\0\4\17globalstatus\1\25always_divide_middle\2\ntheme\tauto\18icons_enabled\2\nsetup\flualine\frequire\0", "config", "lualine.nvim")
+time([[Config for lualine.nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+try_loadstring("\27LJ\2\2;\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0", "config", "nvim-tree.lua")
+time([[Config for nvim-tree.lua]], false)
 if should_profile then save_profiles() end
 
 end)

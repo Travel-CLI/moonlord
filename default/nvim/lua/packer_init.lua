@@ -7,59 +7,60 @@ return require('packer').startup(function()
 
   -- Статуслайн
   use {
-	  'feline-nvim/feline.nvim',
+	  'nvim-lualine/lualine.nvim',
+	  requires = { 'kyazdani42/nvim-web-devicons', opt = true },
 	  config = function()
-		  require('feline').setup()
-	  end
-  }
-
-  -- Подсветка синтаксиса
-  use {
-	  'nvim-treesitter/nvim-treesitter',
-	  run = ':TSUpdate',
-	  config = function()
-
-		  -- Загружаем конфиги treesitter
-		  require'nvim-treesitter.configs'.setup {
-
-			  -- "maintained" - основные пакеты для подсветки, которые поддерживаются разработчиком
-			  ensure_installed = "maintained",
-
-			  -- Асинхронная установка пакетов
-			  sync_install = false,
-
-			  -- Конфигурация подсветки
-			  highlight = {
-
-				  -- Включаем подсветку Neovim treesitter
-				  enable = true,
-
-				  -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-				  -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-				  -- Using this option may slow down your editor, and you may see some duplicate highlights.
-				  -- Instead of true it can also be a list of languages
-				  additional_vim_regex_highlighting = false,
+		  require('lualine').setup {
+			  options = {
+				  icons_enabled = true,
+				  theme = 'auto',
+				  component_separators = { left = '', right = ''},
+				  section_separators = { left = '', right = ''},
+				  disabled_filetypes = {},
+				  always_divide_middle = true,
+				  globalstatus = false,
 			  },
 		  }
 	  end
   }
 
+  -- Проводник
+  use {
+	  'kyazdani42/nvim-tree.lua',
+	  requires = {
+		  'kyazdani42/nvim-web-devicons', -- optional, for file icon
+	  },
+	  config = function() require'nvim-tree'.setup {} end
+  }
+
   -- Цветовая схема
   use {
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  tag = 'v1.*',
+	  'eddyekofo94/gruvbox-flat.nvim',
 	  config = function()
-
-		  -- Конфигурация цветовой схемы
-		  require('rose-pine').setup({
-
-			  -- Берём более светлую версию
-			  dark_variant = 'moon'
-		  })
-
-		  -- Включаем цветовую схему
-		  vim.cmd('colorscheme rose-pine')
+		  vim.cmd('colorscheme gruvbox-flat')
 	  end
+  }
+
+  -- Поиск по файлам
+  use {
+	  'nvim-telescope/telescope.nvim',
+	  requires = { {'nvim-lua/plenary.nvim'} },
+	  config = function()
+		  require('telescope').setup({
+			  defaults = {
+				  layout_config = {
+					  vertical = { width = 0.5 }
+					  -- other layout configuration here
+				  },
+				  -- other defaults configuration here
+			  },
+			  -- other configuration values here
+		  })
+	  end
+  }
+
+  -- Подсветка синтаксиса
+  use {
+	  'sheerun/vim-polyglot'
   }
 end)
