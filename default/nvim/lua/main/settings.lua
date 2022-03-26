@@ -36,7 +36,7 @@ vim.cmd [[autocmd BufEnter * set fo-=c fo-=r fo-=o]] -- Не автокомме�
 
 -- Выключение встроенных плагинов
 -- https://www.reddit.com/r/neovim/comments/p1qlbn/help_speeding_up_startup_time_disabling_builtin/
-local builtInPlugins = {
+--[[ local builtInPlugins = {
   "zip",
   "zipPlugin",
   "gzip",
@@ -57,4 +57,4 @@ local builtInPlugins = {
 
 for null, plugin in pairs(builtInPlugins) do
   g["loaded_" .. plugin] = 1
-end
+end ]]--
