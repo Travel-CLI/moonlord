@@ -29,119 +29,39 @@ return require('packer').startup(function()
 		end
 	}
 
-	-- Проводник
-	use {
-		'kyazdani42/nvim-tree.lua',
-		requires = {
-			'kyazdani42/nvim-web-devicons', -- optional, for file icon
-		},
-		config = function() require'nvim-tree'.setup {} end
-	}
-
-	-- Цветовая схема
-	use {
-		'eddyekofo94/gruvbox-flat.nvim',
-		config = function()
-			vim.cmd('colorscheme gruvbox-flat')
-		end
-	}
-
-
-	-- LSP
-	use {
-		"neovim/nvim-lspconfig",
-		'williamboman/nvim-lsp-installer',
-		config = function()
-			require('lsp_installer').on_server_ready(function(server)
-				local opts = {}
-
-				-- (optional) Customize the options passed to the server
-				-- if server.name == "tsserver" then
-				--     opts.root_dir = function() ... end
-				-- end
-
-				-- This setup() function is exactly the same as lspconfig's setup function.
-				-- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-				server:setup(opts)
-			end)
-		end
-	}
-
-	-- Сниппеты
-	use {
-		'hrsh7th/cmp-vsnip',
-		requires = {{'hrsh7th/vim-vsnip'}}
-	}
+	-- LSP сервер
+	use 'neovim/nvim-lspconfig'
 
 	-- Автодополнение
 	use {
-		"hrsh7th/nvim-cmp",
+		'hrsh7th/nvim-cmp',
 		requires = {
-			{"hrsh7th/cmp-nvim-lsp"}, {"hrsh7th/cmp-buffer"}, {"hrsh7th/cmp-path"},
+			'hrsh7th/cmp-vsnip',
+			'hrsh7th/vim-vsnip',
+			'hrsh7th/cmp-nvim-lsp',
+			'hrsh7th/cmp-path',
 		},
 		config = function()
-			-- Инициализируем локальную переменную с модулем cmp
-			local cmp = require('cmp')
-
-			-- Напишем конфигурацию
-			cmp.setup({
-
-					-- Иконки {{{
-					formatting = {
-					},
-
-					-- }}}
-
-					-- Сниппеты {{{
-					-- Сниппеты
-					snippet = {
-
-						-- С помощью какого механизма сниппетов будет автодополняться код
-						expand = function(args)
-							vim.fn["vsnip#anonymous"](args.body) -- VSnip
-							-- require('luasnip').lsp_expand(args.body) -- LuaSnip
-							-- require('snippy').expand_snippet(args.body) -- Snippy
-							-- vim.fn["UltiSnips#Anon"](args.body) -- Ultisnips
-						end,
-					},
-					-- }}}
-
-					-- Хоткеи {{{
-					-- Клавиши, которые будут взаимодействовать в nvim-cmp
-					mapping = {
-
-						-- Вызов меню автодополнения
-						['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
-						['<CR>'] = cmp.config.disable, -- Я не люблю, когда вещи автодополняются на <Enter>
-						['<C-y>'] = cmp.mapping.confirm({ select = true }), -- А вот на <C-y> вполне ок
-
-						-- Используем <C-e> для того чтобы прервать автодополнение
-						['<C-e>'] = cmp.mapping({
-								i = cmp.mapping.abort(), -- Прерываем автодополнение
-								c = cmp.mapping.close(), -- Закрываем автодополнение
-							}),
-					},
-					-- }}}
-
-					-- Сорняки для автокомплита {{{
-					-- Исходники, из которых будут идти варианты для автодополнения
-					sources = cmp.config.sources({
-							{ name = 'nvim_lsp' }, -- LSP
-							{ name = 'vsnip' }, -- VSnip
-							-- { name = 'luasnip' }, -- LuaSnip
-							-- { name = 'ultisnips' }, -- Ultisnips
-							-- { name = 'snippy' }, -- Snippy
-
-							{ name = 'cmp-nvim-lua' }, -- Автодополнение Neovim Lua
-						}, {
-							{ name = 'buffer' },
-						}),
-					-- }}}
-
-				})
+			require('plugins/cmp')
 		end
 	}
 
+	-- Инсталлер для серверов LSP
+	use {
+		'williamboman/nvim-lsp-installer',
+		config = function()
+			require('plugins/lsp-installer')
+		end
+	}
+
+	-- Тема
+	use({
+		"catppuccin/nvim",
+		as = "catppuccin",
+		config = function()
+			vim.cmd[[colorscheme catppuccin]]
+		end
+	})
 
 	-- Поиск по файлам
 	use {
@@ -161,8 +81,13 @@ return require('packer').startup(function()
 		end
 	}
 
-	-- Подсветка синтаксиса
+	-- Проводник
 	use {
-		'sheerun/vim-polyglot'
+		'kyazdani42/nvim-tree.lua',
+		requires = {
+			'kyazdani42/nvim-web-devicons', -- optional, for file icon
+		},
+		config = function() require'nvim-tree'.setup {} end
 	}
+
 end)

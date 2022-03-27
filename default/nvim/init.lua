@@ -4,9 +4,11 @@
 -- E-mail: crckhd10@gmail.com
 --
 
+-- Главные настройки NeoVim
 require('main/settings')
-require('main/keybindings')
 
+-- Горячие клавиши
+require('main/key/keybindings')
+
+-- Плагины
 require('packer_init')
-
-require('main/extras')
