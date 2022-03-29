@@ -100,4 +100,13 @@ return require('packer').startup(function()
 			require('plugins/zen_mode')
 		end
 	}
+
+	-- Поддержка Git
+	use {
+		'lewis6991/gitsigns.nvim',
+		tag = 'release',
+		config = function ()
+			require('plugins/gitsigns')
+		end
+	}
 end)
