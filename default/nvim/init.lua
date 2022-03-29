@@ -8,7 +8,7 @@
 require('main/settings')
 
 -- Горячие клавиши
-require('main/key/keybindings')
+require('main/keybindings')
 
 -- Плагины
 require('packer_init')

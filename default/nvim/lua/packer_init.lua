@@ -10,22 +10,7 @@ return require('packer').startup(function()
 		'nvim-lualine/lualine.nvim',
 		requires = { 'kyazdani42/nvim-web-devicons', 'arkav/lualine-lsp-progress', opt = true },
 		config = function()
-			require('lualine').setup {
-				options = {
-					icons_enabled = true,
-					theme = 'auto',
-					component_separators = { left = '', right = ''},
-					section_separators = { left = '', right = ''},
-					disabled_filetypes = {},
-					always_divide_middle = true,
-					globalstatus = false,
-				},
-				sections = {
-					lualine_c = {'filename', 'lsp_progress'},
-					lualine_y = {'progress'},
-					lualine_z = {'location'}
-				},
-			}
+			require('plugins/lualine')
 		end
 	}
 
@@ -46,6 +31,14 @@ return require('packer').startup(function()
 		end
 	}
 
+	-- Структура для LSP
+	use {
+		'simrat39/symbols-outline.nvim',
+		config = function()
+			require('plugins/symbols-outline')
+		end
+	}
+
 	-- Инсталлер для серверов LSP
 	use {
 		'williamboman/nvim-lsp-installer',
@@ -58,26 +51,25 @@ return require('packer').startup(function()
 	use({
 		"catppuccin/nvim",
 		as = "catppuccin",
-		config = function()
-			vim.cmd[[colorscheme catppuccin]]
-		end
 	})
+
+	-- Ещё одна тема
+	use {
+		'eddyekofo94/gruvbox-flat.nvim',
+		config = function()
+			vim.cmd[[colorscheme gruvbox-flat]]
+		end
+	}
+
+	-- И ещё одна тема
+	use 'shaunsingh/nord.nvim'
 
 	-- Поиск по файлам
 	use {
 		'nvim-telescope/telescope.nvim',
 		requires = { {'nvim-lua/plenary.nvim'} },
 		config = function()
-			require('telescope').setup({
-					defaults = {
-						layout_config = {
-							vertical = { width = 0.5 }
-							-- other layout configuration here
-						},
-						-- other defaults configuration here
-					},
-					-- other configuration values here
-				})
+			require('plugins/telescope')
 		end
 	}
 
@@ -87,7 +79,25 @@ return require('packer').startup(function()
 		requires = {
 			'kyazdani42/nvim-web-devicons', -- optional, for file icon
 		},
-		config = function() require'nvim-tree'.setup {} end
+		config = function()
+			require('plugins/nvimtree')
+		end
 	}
 
+	-- Стутусбар для буферов
+	use {
+		'akinsho/bufferline.nvim',
+		requires = 'kyazdani42/nvim-web-devicons',
+		config = function()
+			require('plugins/bufline')
+		end
+	}
+
+	-- Zen-mode
+	use {
+		"folke/zen-mode.nvim",
+		config = function()
+			require('plugins/zen_mode')
+		end
+	}
 end)
