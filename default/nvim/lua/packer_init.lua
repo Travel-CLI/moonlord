@@ -17,6 +17,15 @@ return require('packer').startup(function()
 	-- LSP сервер
 	use 'neovim/nvim-lspconfig'
 
+	-- Удобное меню для обозрения проблем LSP
+	use {
+		"folke/trouble.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+		config = function()
+			require("trouble").setup {}
+		end
+	}
+
 	-- Автодополнение
 	use {
 		'hrsh7th/nvim-cmp',
@@ -28,6 +37,13 @@ return require('packer').startup(function()
 		},
 		config = function()
 			require('plugins/cmp')
+		end
+	}
+
+	use {
+		'onsails/lspkind-nvim',
+		config = function ()
+			require('plugins/lspkind')
 		end
 	}
 
@@ -57,12 +73,20 @@ return require('packer').startup(function()
 	use {
 		'eddyekofo94/gruvbox-flat.nvim',
 		config = function()
-			vim.cmd[[colorscheme gruvbox-flat]]
+			--vim.cmd[[colorscheme gruvbox-flat]]
 		end
 	}
 
 	-- И ещё одна тема
-	use 'shaunsingh/nord.nvim'
+	use {
+		'shaunsingh/nord.nvim',
+		config = function()
+
+			-- Установить цвета GUI в терминале
+			vim.o.termguicolors = true
+			vim.cmd[[color nord]]
+		end
+	}
 
 	-- Поиск по файлам
 	use {
@@ -108,5 +132,12 @@ return require('packer').startup(function()
 		config = function ()
 			require('plugins/gitsigns')
 		end
+	}
+
+	-- Тесты в Neovim
+	use {
+		"rcarriga/vim-ultest",
+		requires = {"vim-test/vim-test"},
+		run = ":UpdateRemotePlugins"
 	}
 end)
