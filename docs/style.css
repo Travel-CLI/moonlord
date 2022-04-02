@@ -1,0 +1,169 @@
+:root {
+	/* Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com> */
+	/* License:    MIT */
+	--nord-0: #2e3440;
+	--nord-1: #3b4252;
+	--nord-2: #434c5e;
+	--nord-3: #4c566a;
+	--nord-4: #d8dee9;
+	--nord-5: #e5e9f0;
+	--nord-6: #eceff4;
+}
+
+.wrapper {
+	scroll-snap-type: y mandatory;
+	height: 100vh;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+	font-family: 'JetBrains Mono', 'SF Mono', sans-serif;
+}
+
+/* Hide scrollbar */
+.wrapper::-webkit-scrollbar {
+	display: none;
+}
+
+.wrapper {
+	-ms-overflow-style: none;
+	scrollbar-width: none
+}
+
+/* Header */
+.header {
+	position: absolute;
+	display: flex;
+	user-select: none;
+	top: 64px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-weight: 500;
+	align-items: flex-start;
+}
+
+.header__text {
+	color: var(--nord-3);
+	font-size: 3rem;
+}
+
+.header__text_terminal {
+	display: block;
+	color: var(--nord-2);
+	margin-top: -4px;
+	letter-spacing: -.4em;
+}
+
+.header__text_flicker {
+	letter-spacing: initial;
+	display: block;
+	color: var(--nord-2);
+	margin-top: -4px;
+	animation: text-flicker .5s ease-in-out 0s infinite alternate;
+}
+
+@keyframes text-flicker {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+/* Hero */
+.hero {
+	position: relative;
+	min-height: 100vh;
+	scroll-snap-align: center;
+	width: 100%;
+	background-color: var(--nord-0);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.hero-select {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+	user-select: none;
+}
+
+.hero-select__item {
+	background-color: var(--nord-1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	box-shadow: 8px 4px 15px -5px rgba(0,0,0,0.29);
+	padding: 88px 90px;
+}
+.hero-select__item:hover {
+	background-color: var(--nord-2);
+	cursor: pointer;
+	transform: scale(1.015);
+	box-shadow: 8px 4px 20px -5px rgba(0,0,0,0.29);
+	transition: .1s ease-in-out;
+}
+
+.hero-image {
+	max-width: 140px;
+	max-height: 140px;
+}
+
+/* Description sections */
+.description {
+	min-height: 100vh;
+	max-width: 100%;
+	scroll-snap-align: start;
+	padding: 2rem 4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.description.nvim {
+	background-color: var(--nord-1);
+}
+
+.description.tmux {
+	background-color: var(--nord-2);
+}
+
+.description.vscode {
+	background-color: var(--nord-3);
+}
+
+.description__describe {
+	padding: 0 1rem 0 0;
+	max-width: 50%;
+}
+
+.description__heading {
+	color: var(--nord-5);
+	font-weight: 700;
+	margin: 12px 0 10px;
+}
+
+.description__text {
+	color: var(--nord-6);
+}
+
+.emgithub-container {
+	max-width: 50%;
+	max-height: calc(100vh - 96px);
+	overflow: auto;
+	border-radius: 7px;
+	box-shadow: 8px 4px 15px -5px rgba(0,0,0,0.29);
+}
+
+.emgithub-container::-webkit-scrollbar {
+	display: none;
+}
+
+.emgithub-container {
+	-ms-overflow-style: none;
+	scrollbar-width: none
+}

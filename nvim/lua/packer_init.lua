@@ -40,10 +40,22 @@ return require('packer').startup(function()
 		end
 	}
 
+	-- Иконки для автодополнения
 	use {
 		'onsails/lspkind-nvim',
 		config = function ()
 			require('plugins/lspkind')
+		end
+	}
+
+	-- Комментарии
+	use {
+		'b3nj5m1n/kommentary',
+		config = function()
+			require('kommentary.config').configure_language("typescript", {
+				single_line_comment_string = "//",
+				multi_line_comment_strings = {"/*", "*/"},
+			})
 		end
 	}
 

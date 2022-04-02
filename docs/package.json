@@ -1,0 +1,13 @@
+{
+  "name": "mountain_dots",
+  "version": "1.0.0",
+  "description": "Mountain Dots Website",
+  "main": "script.js",
+  "repository": "https://github.com/crckhd/mountain_dots",
+  "author": "Daniil Shilo <crckhd10@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

@@ -9,11 +9,11 @@ local map = vim.api.nvim_set_keymap                                             
 -- Настройки
 vim.g.mapleader = ' '                                                                     -- Используем Space, как клавишу для альтернативных хотекеев
 
+-- Экраны
+map('n', '<s-->', '<cmd>vertical resize -5<CR>', {noremap = true})
+
 -- LSP
 map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
-
-map('n', '<leader>x', '<cmd>TroubleToggle<CR>', {noremap = true})                         -- Открыть меню с проблемами LSP
-map('n', 'gr', '<cmd>Trouble lsp_references<CR>', {noremap = true})                       -- Референсы в LSP
 
 -- Плагины
 map('n', '<leader>v', '<cmd>NvimTreeToggle<CR>', {noremap = true})                        -- Открыть Neovim Tree
@@ -35,3 +35,7 @@ map('n', '<A->>', '<cmd>BufferLineMoveNext<CR>', {noremap = true})              
 map('n', '<A-<>', '<cmd>BufferLineMovePrev<CR>', {noremap = true})                        -- Закрыть буффер справа
 
 map('n', '<leader>z', '<cmd>ZenMode<CR>', {noremap = true})                               -- Закрыть буффер справа
+
+map('n', '<leader>x', '<cmd>TroubleToggle<CR>', {noremap = true})                         -- Открыть меню с проблемами LSP
+map('n', 'gr', '<cmd>Trouble lsp_references<CR>', {noremap = true})                       -- Референсы в LSP
+
