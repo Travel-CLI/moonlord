@@ -3,7 +3,8 @@
 <div align="center">
   <img src="https://user-images.githubusercontent.com/101672047/161741513-76c6111f-062c-4a7f-b1bd-0f52f1adde75.png" alt="" >
 </div>
-
+<br>
+<br>
 В данной директории хранится конфигурация Neovim.
 
 ## Используемые плагины
