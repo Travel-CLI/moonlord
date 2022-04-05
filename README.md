@@ -1,4 +1,7 @@
 # README
+
+![image](https://user-images.githubusercontent.com/101672047/161741236-2ad3f012-81f7-4202-bb9a-e3d535c3c43f.png)
+
 Дефолтные конфигурации для программ на Linux.
 
 Уже существуют следующие конфигурации:
