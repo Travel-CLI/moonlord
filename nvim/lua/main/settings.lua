@@ -16,6 +16,7 @@ opt.splitbelow = true                         -- Горизонтальные с
 
 -- Цветовая тема
 opt.termguicolors = true                      -- Включаем поддержку всех цветов (24bit)
+opt.colorcolumn = '132'
 
 -- Табы
 opt.expandtab = false                         -- Используем табы по умолчанию
@@ -24,10 +25,11 @@ opt.tabstop = 4                               -- 1 таб == 4 пробела в
 opt.smartindent = true                        -- Подстраивать новые строки под предыдущий отступ
 
 -- CPU
---opt.updatetime = 400                          -- Милисекунд до тригера 'document_highlight'
+--opt.updatetime = 400                        -- Милисекунд до тригера 'document_highlight'
 opt.lazyredraw = true                         -- Не перерисовывать при выполнении скриптов
 opt.hidden = true                             -- Не запрашивать сохранение буфера при переключении
 opt.history = 100                             -- Сохранять 100 изменений в памяти
+opt.synmaxcol = 1024                          -- Не подсвечивать длинные строки
 
 -- Важные настройки
 opt.clipboard = 'unnamedplus'                 -- Используем системный буфер обмена

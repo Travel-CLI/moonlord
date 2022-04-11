@@ -23,7 +23,7 @@ return require('packer').startup(function()
 		requires = "kyazdani42/nvim-web-devicons",
 		config = function()
 			require("trouble").setup {}
-		end
+		end,
 	}
 
 	-- Автодополнение
@@ -34,6 +34,7 @@ return require('packer').startup(function()
 			'hrsh7th/vim-vsnip',
 			'hrsh7th/cmp-nvim-lsp',
 			'hrsh7th/cmp-path',
+			'hrsh7th/cmp-nvim-lsp-signature-help'
 		},
 		config = function()
 			require('plugins/cmp')
@@ -56,7 +57,7 @@ return require('packer').startup(function()
 				single_line_comment_string = "//",
 				multi_line_comment_strings = {"/*", "*/"},
 			})
-		end
+		end,
 	}
 
 	-- Структура для LSP
@@ -64,7 +65,7 @@ return require('packer').startup(function()
 		'simrat39/symbols-outline.nvim',
 		config = function()
 			require('plugins/symbols-outline')
-		end
+		end,
 	}
 
 	-- Инсталлер для серверов LSP
@@ -75,28 +76,49 @@ return require('packer').startup(function()
 		end
 	}
 
-	-- Тема
-	use({
-		"catppuccin/nvim",
-		as = "catppuccin",
-	})
-
-	-- Ещё одна тема
+	-- Стартовый экран
 	use {
-		'eddyekofo94/gruvbox-flat.nvim',
-		config = function()
-			--vim.cmd[[colorscheme gruvbox-flat]]
+		'goolord/alpha-nvim',
+		requires = { 'kyazdani42/nvim-web-devicons' },
+		config = function ()
+			require'alpha'.setup(require'alpha.themes.startify'.config)
 		end
 	}
 
-	-- И ещё одна тема
+	-- Плагин для автодополнения скобок и кавычек
+	use {
+		'windwp/nvim-autopairs',
+		config = function()
+			require('nvim-autopairs').setup{}
+		end
+	}
+
+	-- Тема
+	use {
+		"projekt0n/github-nvim-theme",
+		config = function ()
+			require('github-theme').setup()
+			vim.cmd[[color github_dark]]
+		end
+	}
+
+	-- Ещё одна тема
 	use {
 		'shaunsingh/nord.nvim',
 		config = function()
 
 			-- Установить цвета GUI в терминале
 			vim.o.termguicolors = true
-			vim.cmd[[color nord]]
+			--vim.cmd[[color nord]]
+		end
+	}
+
+	-- И ещё одна тема
+	use {
+		'ellisonleao/gruvbox.nvim',
+		config = function ()
+			-- vim.o.background = "dark"
+			-- vim.cmd[[color gruvbox]]
 		end
 	}
 
@@ -143,13 +165,22 @@ return require('packer').startup(function()
 		tag = 'release',
 		config = function ()
 			require('plugins/gitsigns')
-		end
+		end,
 	}
 
 	-- Тесты в Neovim
 	use {
 		"rcarriga/vim-ultest",
 		requires = {"vim-test/vim-test"},
-		run = ":UpdateRemotePlugins"
+		run = ":UpdateRemotePlugins",
 	}
+
+	-- Плагин для подсветки синтаксиса
+	use {
+		'nvim-treesitter/nvim-treesitter',
+		config = function ()
+			require('plugins/tree-sitter')
+		end
+	}
+
 end)

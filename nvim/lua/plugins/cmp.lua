@@ -24,6 +24,7 @@ cmp.setup{
 
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' }, -- LSP
+		{ name = 'nvim_lsp_signature_help' }, -- Помощь при введении параметров в методах
 		{ name = 'vsnip' },    -- VSnip
 		{ name = 'buffer' },   -- Буфферы
 	}, {
