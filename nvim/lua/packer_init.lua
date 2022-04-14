@@ -97,8 +97,8 @@ return require('packer').startup(function()
 	use {
 		"projekt0n/github-nvim-theme",
 		config = function ()
-			require('github-theme').setup()
-			vim.cmd[[color github_dark]]
+			--require('github-theme').setup()
+			--vim.cmd[[color github_dark]]
 		end
 	}
 
@@ -115,10 +115,10 @@ return require('packer').startup(function()
 
 	-- И ещё одна тема
 	use {
-		'ellisonleao/gruvbox.nvim',
+		'eddyekofo94/gruvbox-flat.nvim',
 		config = function ()
-			-- vim.o.background = "dark"
-			-- vim.cmd[[color gruvbox]]
+			vim.o.background = "dark"
+			vim.cmd[[color gruvbox-flat]]
 		end
 	}
 

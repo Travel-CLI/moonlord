@@ -7,3 +7,4 @@ ln -sf $PWD/nvim $HOME/.config/
 ln -sf $PWD/Xresources/Xresources $HOME/.Xresources
 ln -sf $PWD/Xresources/settings.json $HOME/.cache/Code/User/settings.json
 ln -sf $PWD/tmux/tmux.conf $HOME/.tmux.conf
+ln -sf $PWD/zsh/zshrc $HOME/.zshrc

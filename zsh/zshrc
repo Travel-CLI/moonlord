@@ -1,0 +1,38 @@
+# Author: Daniil Shilo <crckhd10@gmail.com>
+# Plugin manager: Antigen
+
+### PATH VARIABLES ###
+ANTIGEN_PATH="$HOME/.config/antigen.zsh"                          # Path for antigen plugin manager
+CARGO_PATH="$HOME/.cargo/bin"                                     # Path for cargo (rust package manager binaries)
+
+# Check if cargo exists
+if [ -d $CARGO_PATH ]; then
+	export PATH=$CARGO_PATH:$PATH                                 # Adding it into $PATH environment variable
+fi
+
+# Check if Antigen is downloaded
+if [ ! -f $ANTIGEN_PATH ]; then
+    echo "Antigen is not found!" >&2
+	curl -L git.io/antigen > $ANTIGEN_PATH                        # If not downloaded, then install it
+fi
+
+### PLUGIN MANAGER ###
+source $ANTIGEN_PATH                                              # Source antigen plugin manager
+
+antigen bundle autojump                                           # Load autojump ohmyzsh's plugin
+antigen bundle git                                                # Load git ohmyzsh's plugin
+antigen bundle zsh-users/zsh-syntax-highlighting                  # Syntax highlighting bundle
+
+# Add exa aliases, if exa exists
+type exa &> /dev/null &&
+	antigen bundle DarrinTisdale/zsh-aliases-exa                  # Add exa alises
+
+
+antigen bundle reobin/typewritten@main                            # Typewritten theme
+antigen bundle zsh-users/zsh-autosuggestions                      # Autocomplete bundle
+
+# Tell Antigen that you're done
+antigen apply
+
+# Add more alises
+alias lo="exa --icons"
