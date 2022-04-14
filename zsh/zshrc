@@ -4,6 +4,7 @@
 ### PATH VARIABLES ###
 ANTIGEN_PATH="$HOME/.config/antigen.zsh"                          # Path for antigen plugin manager
 CARGO_PATH="$HOME/.cargo/bin"                                     # Path for cargo (rust package manager binaries)
+NVM_DIR=~/.nvm
 
 # Check if cargo exists
 if [ -d $CARGO_PATH ]; then
@@ -14,6 +15,18 @@ fi
 if [ ! -f $ANTIGEN_PATH ]; then
     echo "Antigen is not found!" >&2
 	curl -L git.io/antigen > $ANTIGEN_PATH                        # If not downloaded, then install it
+fi
+
+# Check if NVM is available and enable it
+if [ -d $NVM_PATH ]; then
+
+	# Enable NVM
+	export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+else
+
+	# Download NVM
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 fi
 
 ### PLUGIN MANAGER ###
