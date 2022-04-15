@@ -26,12 +26,20 @@ return require('packer').startup(function()
 		end,
 	}
 
+	-- Скроллбар
+	use {
+		"petertriho/nvim-scrollbar",
+		config = function ()
+			require("scrollbar").setup();
+		end
+	}
+
 	-- Автодополнение
 	use {
 		'hrsh7th/nvim-cmp',
 		requires = {
-			'hrsh7th/cmp-vsnip',
 			'hrsh7th/vim-vsnip',
+			'hrsh7th/cmp-vsnip',
 			'hrsh7th/cmp-nvim-lsp',
 			'hrsh7th/cmp-path',
 			'hrsh7th/cmp-nvim-lsp-signature-help'

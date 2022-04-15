@@ -29,6 +29,7 @@ cmp.setup{
 		{ name = 'nvim_lsp_signature_help' }, -- Помощь при введении параметров в методах
 		{ name = 'vsnip' },    -- VSnip
 		{ name = 'buffer' },   -- Буфферы
+		{ name = 'path' },     -- Пути
 	}, {
 	}),
 	formatting = {
