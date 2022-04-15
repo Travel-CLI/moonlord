@@ -20,6 +20,8 @@ cmp.setup{
 			i = cmp.mapping.abort(), -- Прерываем автодополнение
 			c = cmp.mapping.close(), -- Закрываем автодополнение
 		}),
+		['<C-p>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
+		['<C-n>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
 	},
 
 	sources = cmp.config.sources({
