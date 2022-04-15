@@ -1,11 +1,11 @@
 #!/usr/bin/bash
 
 # Link some programs (folders)
-ln -sf $PWD/nvim $HOME/.config/
-ln -sf $PWD/kitty $HOME/.config/
+ln -sf $PWD/nvim $HOME/.config/ && echo "Linked Neovim config!" || echo "You don't have neovim configuration folder!"
+ln -sf $PWD/kitty $HOME/.config/ && echo "Linked kitty config!" || echo "You don't have kitty configuration folder!"
 
 # Link some programs (files)
-ln -sf $PWD/Xresources/Xresources $HOME/.Xresources
-ln -sf $PWD/Xresources/settings.json $HOME/.cache/Code/User/settings.json
-ln -sf $PWD/tmux/tmux.conf $HOME/.tmux.conf
-ln -sf $PWD/zsh/zshrc $HOME/.zshrc
+ln -sf $PWD/Xresources/Xresources $HOME/.Xresources && echo "Linked Xresources config!" || echo "Some troubles with linking Xresources!"
+[ -d $HOME/.cache/Code/User ] && ln -sf $PWD/Xresources/settings.json $HOME/.cache/Code/User/settings.json || echo "No VSCode configuration folder!"
+ln -sf $PWD/tmux/tmux.conf $HOME/.tmux.conf && echo "Linked tmux config!" || echo "Some troubles with linking tmux!"
+ln -sf $PWD/zsh/zshrc $HOME/.zshrc && echo "Linked zshrc config!" || echo "Some troubles with linking zshrc!"
