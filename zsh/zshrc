@@ -4,7 +4,11 @@
 ### PATH VARIABLES ###
 ANTIGEN_PATH="$HOME/.config/antigen.zsh"                          # Path for antigen plugin manager
 CARGO_PATH="$HOME/.cargo/bin"                                     # Path for cargo (rust package manager binaries)
-NVM_DIR=~/.nvm
+NVM_DIR=~/.nvm                                                    # Path for NVM dir
+HISTFILE=~/.zsh_history                                           # File for history
+HISTSIZE=10000                                                    # Amount of saved command in history file
+SAVEHIST=10000                                                    # How many lines are remembered in one session
+setopt appendhistory                                              # Save history
 
 # Check if cargo exists
 if [ -d $CARGO_PATH ]; then
