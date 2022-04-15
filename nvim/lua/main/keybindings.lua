@@ -29,8 +29,8 @@ map('n', 'gd', '<cmd>Telescope lsp_definitions<CR>', {noremap = true})          
 map('n', '<leader>s', '<cmd>SymbolsOutline<CR>', {noremap = true})                        -- Структура для файла
 
 map('n', '<A-c>', '<cmd>bd<CR>', {noremap = true})                                        -- Закрыть буффер
-map('n', '<A-,>', '<cmd>BufferLineCyclePrev<CR>', {noremap = true})                       -- Перейти в предыдущий буффер
-map('n', '<A-.>', '<cmd>BufferLineCycleNext<CR>', {noremap = true})                       -- Перейти в следующий буффер
+map('n', '<C-i>', '<cmd>BufferLineCyclePrev<CR>', {noremap = true})                       -- Перейти в предыдущий буффер
+map('n', '<C-o>', '<cmd>BufferLineCycleNext<CR>', {noremap = true})                       -- Перейти в следующий буффер
 map('n', '<A->>', '<cmd>BufferLineMoveNext<CR>', {noremap = true})                        -- Закрыть буффер слева
 map('n', '<A-<>', '<cmd>BufferLineMovePrev<CR>', {noremap = true})                        -- Закрыть буффер справа
 
