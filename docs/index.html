@@ -46,8 +46,29 @@
 				<h1 class="description__heading">Neovim</h1>
 				<p class="description__text">
 					Когда дело касается Neovim - я предельно осторожен. Данный редактор может оказаться как лучшим другом, так и худшим врагом, ибо с возрастанием количества плагинов растёт и низкая производительность.
-					На данный момент редактор включает в себя 30 плагинов. Это и так много, но это тот минимум, с которым данный редактор является одним из лучших, что я пробовал.
+					Я настраивал Neovim для того чтобы работать с кодом для продакшена, в данной конфигурации нет всех фич, которые есть в IDE, однако, редактор все же становится намного мощнее.
 				</p>
+				<p class="description__text">Уже сейчас благодаря плагинам настроены и доступны возможности:</p>
+				<ul class="description__list">
+					<li class="description__list-item">Переход к объявлению объекта (Go To Definition) [LSP]</li>
+					<li class="description__list-item">Переход к использованию объекта (Go To References) [LSP]</li>
+					<li class="description__list-item">Установка LSP прямо из редактора (Lsp install from editor) [lsp-install]</li>
+					<li class="description__list-item">Дерево объектов (symbols) [SymbolsOutline]</li>
+					<li class="description__list-item">Тестирование кейсов Mocha и Jest прямо из редактора (Test case from editor) [Ultest]</li>
+					<li class="description__list-item">Автодополнение (Autocomplete) [cmp]</li>
+					<li class="description__list-item">Качественная подсветка синтаксиса (Syntax Highlighting) [tree-sitter]</li>
+					<li class="description__list-item">Интеграция с Git (Git Integration) [git-signs]</li>
+					<li class="description__list-item">Быстрый поиск (Fuzzy Search) [telescope]</li>
+					<li class="description__list-item">Поиска файлов в репозитории Git (Git Search) [telescope]</li>
+					<li class="description__list-item">Переход к недавним файлам (Recent Files) [telescope]</li>
+					<li class="description__list-item">Переход к изменениям (List Git Changes) [telescope]</li>
+					<li class="description__list-item">Zen-режим (zen-mode) [ZenMode]</li>
+					<li class="description__list-item">Статус-бар (Status bar) [lualine]</li>
+					<li class="description__list-item">Удобный переход между буферами (Buffer swap with two hotkeys) [Bufferline]</li>
+				</ul>
+				<p class="description__text"><em>И многое другое</em></p>
+				<p class="description__text">Я постоянно обновляю конфигурацию и допиливаю её под свои нужды. В репозитории можно увидеть, что вкладка issues никогда не остается незамеченной, все время исправляются баги и недочеты в конфигурации, в результате данных прямых действий получается конфигурация, которая работает быстро, стабильно, а что самое главное - ей удобно пользоваться :)</p>
+				<p class="description__text">Если вдруг появилось желание протестировать данную конфигурацию, то достаточно просто перенести содержимое директории <code class="description__code">neovim</code> в <code class="description__code">$HOME/.config/nvim</code>, а затем запустить комманду <code class="description__code">PackerSync</code></p>
 			</div>
 			<script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fcrckhd%2Fmountain_dots%2Fblob%2Fmain%2Fnvim%2Flua%2Fpacker_init.lua&style=nord"></script>
 		</section>
@@ -55,9 +76,19 @@
 			<div class="description__describe">
 				<h1 class="description__heading">Tmux</h1>
 				<p class="description__text">
-					
+				Tmux - терминальный мультиплексер, который позволяет запустить сразу несколько сессий шелла в одном терминале. Я выбрал его из-за простоты использования и легкой настраиваемости. Естественно все не было так гладко при конфигурации (взять даже извечную проблему, когда цвета в Neovim, который в свою очередь запущен в сессии tmux - искажаются), однако tmux все равно остается моим любимчиком среди терминальных мультиплексеров.
 				</p>
+				<p class="description__text">Из фич уже настроены:</p>
+				<ul class="description__list">
+					<li class="description__list-item">Дополнительная кнопка для действий - Ctrl + A (Screen hotkey)</li>
+					<li class="description__list-item">Поддержка 256-цветов в терминале (256-color support in config)</li>
+					<li class="description__list-item">Быстрая перезагрузка (Hot Reload)</li>
+					<li class="description__list-item">Понятная нумерация панелей (Panel numeration fix)</li>
+					<li class="description__list-item">Дополнительные хоткеи, которые увеличивают скорость взаимодействия с мультиплексером (Additional hotkeys)</li>
+				</ul>
+				<p class="description__text">Я пользуюсь данной программой каждый день, и убеждаюсь в том, что все что необходимо - уже настроено и готово к использованию другими людьми</p>
 			</div>
+			<script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fcrckhd%2Fmountain_dots%2Fblob%2Fmain%2Ftmux%2Ftmux.conf&style=nord"></script>
 		</section>
 		<section id="vscode_section" class="description vscode">
 			<div class="description__describe">

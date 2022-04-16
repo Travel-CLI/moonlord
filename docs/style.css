@@ -151,19 +151,37 @@
 	color: var(--nord-6);
 }
 
+.description__code {
+	background-color: var(--nord-2);
+	padding: 1px 5px;
+	display: inline-block;
+	margin-top: 4px;
+	color: var(--nord-4);
+	border-radius: 2px;
+}
+
+.description__list {
+	color: var(--nord-6);
+}
+
+.description__list-item {
+	color: var(--nord-6);
+	margin-top: 0.3em;
+}
+
 .emgithub-container {
-	max-width: 50%;
+	width: 50%;
 	max-height: calc(100vh - 96px);
 	overflow: auto;
 	border-radius: 7px;
 	box-shadow: 8px 4px 15px -5px rgba(0,0,0,0.29);
 }
 
-.emgithub-container::-webkit-scrollbar {
+.hljs::-webkit-scrollbar {
 	display: none;
 }
 
-.emgithub-container {
+.hljs {
 	-ms-overflow-style: none;
 	scrollbar-width: none
 }
