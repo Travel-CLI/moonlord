@@ -8,9 +8,26 @@ return require('packer').startup(function()
 	-- Статуслайн
 	use {
 		'nvim-lualine/lualine.nvim',
-		requires = { 'kyazdani42/nvim-web-devicons', 'arkav/lualine-lsp-progress', opt = true },
+		requires = { 'kyazdani42/nvim-web-devicons', opt = true },
 		config = function()
 			require('plugins/lualine')
+		end
+	}
+
+	-- Прогресс LSP
+	use {
+		'j-hui/fidget.nvim',
+		config = function()
+			require('fidget').setup({
+				text = {
+					spinner = "moon",
+					commenced = "Погнали",
+					completed = "Готово!"
+				},
+				align = {
+					bottom = false
+				}
+			})
 		end
 	}
 
@@ -112,7 +129,7 @@ return require('packer').startup(function()
 	}
 
 	-- Быстрый поиск Telescope
-	use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
 	-- Поиск по файлам
 	use {
@@ -151,18 +168,12 @@ return require('packer').startup(function()
 		end
 	}
 
-	-- Форматирование и линтер
-	--[[ use({
-		"jose-elias-alvarez/null-ls.nvim",
+	use {
+		'folke/which-key.nvim',
 		config = function()
-			require("null-ls").setup({
-				require("null-ls").builtins.formatting.stylua,
-				require("null-ls").builtins.diagnostics.eslint,
-				require('null-ls').builtins.
-			})
-		end,
-		requires = { "nvim-lua/plenary.nvim" },
-	}) ]]
+			require("which-key").setup {}
+		end
+	}
 
 	-- Поддержка Git
 	use {

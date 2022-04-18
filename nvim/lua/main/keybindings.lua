@@ -12,9 +12,13 @@ vim.g.mapleader = ' '                                                           
 -- Экраны
 map('n', '<s-->', '<cmd>vertical resize -5<CR>', {noremap = true})
 
--- LSP
-map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
-map('n', '<leader>r', '<cmd>lua vim.lsp.buf.formatting()<CR>', {noremap = true})
+-- LSP (все горячие клавиши начинаются с g), кроме ховера
+map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})                       -- Ховер для объекта
+map('n', 'gf', '<cmd>lua vim.lsp.buf.formatting()<CR>', {noremap = true})                 -- Форматировать документ
+map('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<CR>', {noremap = true})                -- Действия с кодом
+map('n', 'gR', '<cmd>lua vim.lsp.buf.rename()<CR>', {noremap = true})                     -- Переименовать объект
+map('n', 'gd', '<cmd>Telescope lsp_definitions<CR>', {noremap = true})                    -- Объявления в LSP
+map('n', 'gr', '<cmd>Trouble lsp_references<CR>', {noremap = true})                       -- Референсы в LSP
 
 -- Плагины
 map('n', '<leader>v', '<cmd>NvimTreeToggle<CR>', {noremap = true})                        -- Открыть Neovim Tree
@@ -25,7 +29,6 @@ map('n', '<leader>b', '<cmd>Telescope git_branches<CR>', {noremap = true})      
 map('n', '<leader>f', '<cmd>Telescope live_grep<CR>', {noremap = true})                   -- Поиск строки
 map('n', '<leader>q', '<cmd>Telescope buffers<CR>', {noremap = true})                     -- Буфферы
 map('n', '<leader>l', '<cmd>Telescope git_status<CR>', {noremap = true})                  -- Изменения в Git
-map('n', 'gd', '<cmd>Telescope lsp_definitions<CR>', {noremap = true})                    -- Объявления в LSP
 
 map('n', '<leader>s', '<cmd>SymbolsOutline<CR>', {noremap = true})                        -- Структура для файла
 
@@ -38,4 +41,3 @@ map('n', '<A-<>', '<cmd>BufferLineMovePrev<CR>', {noremap = true})              
 map('n', '<leader>z', '<cmd>ZenMode<CR>', {noremap = true})                               -- Закрыть буффер справа
 
 map('n', '<leader>x', '<cmd>TroubleToggle<CR>', {noremap = true})                         -- Открыть меню с проблемами LSP
-map('n', 'gr', '<cmd>Trouble lsp_references<CR>', {noremap = true})                       -- Референсы в LSP
