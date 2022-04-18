@@ -29,7 +29,7 @@ return require('packer').startup(function()
 	-- Скроллбар
 	use {
 		"petertriho/nvim-scrollbar",
-		config = function ()
+		config = function()
 			require("scrollbar").setup();
 		end
 	}
@@ -52,7 +52,7 @@ return require('packer').startup(function()
 	-- Иконки для автодополнения
 	use {
 		'onsails/lspkind-nvim',
-		config = function ()
+		config = function()
 			require('plugins/lspkind')
 		end
 	}
@@ -63,7 +63,7 @@ return require('packer').startup(function()
 		config = function()
 			require('kommentary.config').configure_language("typescript", {
 				single_line_comment_string = "//",
-				multi_line_comment_strings = {"/*", "*/"},
+				multi_line_comment_strings = { "/*", "*/" },
 			})
 		end,
 	}
@@ -88,8 +88,8 @@ return require('packer').startup(function()
 	use {
 		'goolord/alpha-nvim',
 		requires = { 'kyazdani42/nvim-web-devicons' },
-		config = function ()
-			require'alpha'.setup(require'alpha.themes.startify'.config)
+		config = function()
+			require 'alpha'.setup(require 'alpha.themes.startify'.config)
 		end
 	}
 
@@ -97,43 +97,27 @@ return require('packer').startup(function()
 	use {
 		'windwp/nvim-autopairs',
 		config = function()
-			require('nvim-autopairs').setup{}
+			require('nvim-autopairs').setup {}
 		end
 	}
 
-	-- Тема
-	use {
-		"projekt0n/github-nvim-theme",
-		config = function ()
-			--require('github-theme').setup()
-			--vim.cmd[[color github_dark]]
-		end
-	}
+	vim.o.termguicolors = true
+	vim.o.background = "dark"
 
-	-- Ещё одна тема
 	use {
-		'shaunsingh/nord.nvim',
+		'sainnhe/everforest',
 		config = function()
-
-			-- Установить цвета GUI в терминале
-			vim.o.termguicolors = true
-			--vim.cmd[[color nord]]
+			vim.cmd [[color everforest]]
 		end
 	}
 
-	-- И ещё одна тема
-	use {
-		'eddyekofo94/gruvbox-flat.nvim',
-		config = function ()
-			vim.o.background = "dark"
-			vim.cmd[[color gruvbox-flat]]
-		end
-	}
+	-- Быстрый поиск Telescope
+	use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
 	-- Поиск по файлам
 	use {
 		'nvim-telescope/telescope.nvim',
-		requires = { {'nvim-lua/plenary.nvim'} },
+		requires = { { 'nvim-lua/plenary.nvim' } },
 		config = function()
 			require('plugins/telescope')
 		end
@@ -167,11 +151,24 @@ return require('packer').startup(function()
 		end
 	}
 
+	-- Форматирование и линтер
+	--[[ use({
+		"jose-elias-alvarez/null-ls.nvim",
+		config = function()
+			require("null-ls").setup({
+				require("null-ls").builtins.formatting.stylua,
+				require("null-ls").builtins.diagnostics.eslint,
+				require('null-ls').builtins.
+			})
+		end,
+		requires = { "nvim-lua/plenary.nvim" },
+	}) ]]
+
 	-- Поддержка Git
 	use {
 		'lewis6991/gitsigns.nvim',
 		tag = 'release',
-		config = function ()
+		config = function()
 			require('plugins/gitsigns')
 		end,
 	}
@@ -179,14 +176,14 @@ return require('packer').startup(function()
 	-- Тесты в Neovim
 	use {
 		"rcarriga/vim-ultest",
-		requires = {"vim-test/vim-test"},
+		requires = { "vim-test/vim-test" },
 		run = ":UpdateRemotePlugins",
 	}
 
 	-- Плагин для подсветки синтаксиса
 	use {
 		'nvim-treesitter/nvim-treesitter',
-		config = function ()
+		config = function()
 			require('plugins/tree-sitter')
 		end
 	}

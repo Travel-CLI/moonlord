@@ -16,7 +16,6 @@ opt.splitbelow = true                         -- Горизонтальные с
 
 -- Цветовая тема
 opt.termguicolors = true                      -- Включаем поддержку всех цветов (24bit)
-opt.colorcolumn = '132'
 
 -- Табы
 opt.expandtab = false                         -- Используем табы по умолчанию

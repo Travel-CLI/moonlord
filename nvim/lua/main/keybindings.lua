@@ -14,6 +14,7 @@ map('n', '<s-->', '<cmd>vertical resize -5<CR>', {noremap = true})
 
 -- LSP
 map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
+map('n', '<leader>r', '<cmd>lua vim.lsp.buf.formatting()<CR>', {noremap = true})
 
 -- Плагины
 map('n', '<leader>v', '<cmd>NvimTreeToggle<CR>', {noremap = true})                        -- Открыть Neovim Tree
@@ -29,8 +30,8 @@ map('n', 'gd', '<cmd>Telescope lsp_definitions<CR>', {noremap = true})          
 map('n', '<leader>s', '<cmd>SymbolsOutline<CR>', {noremap = true})                        -- Структура для файла
 
 map('n', '<A-c>', '<cmd>bd<CR>', {noremap = true})                                        -- Закрыть буффер
-map('n', '<C-i>', '<cmd>BufferLineCyclePrev<CR>', {noremap = true})                       -- Перейти в предыдущий буффер
-map('n', '<C-o>', '<cmd>BufferLineCycleNext<CR>', {noremap = true})                       -- Перейти в следующий буффер
+map('n', '<A-,>', '<cmd>BufferLineCyclePrev<CR>', {noremap = true})                       -- Перейти в предыдущий буффер
+map('n', '<A-.>', '<cmd>BufferLineCycleNext<CR>', {noremap = true})                       -- Перейти в следующий буффер
 map('n', '<A->>', '<cmd>BufferLineMoveNext<CR>', {noremap = true})                        -- Закрыть буффер слева
 map('n', '<A-<>', '<cmd>BufferLineMovePrev<CR>', {noremap = true})                        -- Закрыть буффер справа
 
@@ -38,4 +39,3 @@ map('n', '<leader>z', '<cmd>ZenMode<CR>', {noremap = true})                     
 
 map('n', '<leader>x', '<cmd>TroubleToggle<CR>', {noremap = true})                         -- Открыть меню с проблемами LSP
 map('n', 'gr', '<cmd>Trouble lsp_references<CR>', {noremap = true})                       -- Референсы в LSP
-

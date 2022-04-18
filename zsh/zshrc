@@ -52,4 +52,4 @@ antigen bundle zsh-users/zsh-autosuggestions                      # Autocomplete
 antigen apply
 
 # Add more alises
-alias lo="exa --icons"
+alias ls="exa --icons"
