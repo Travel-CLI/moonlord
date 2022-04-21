@@ -42,7 +42,7 @@ You can talk about coding fonts for a long time, but you need to remember one th
 You should use **one theme over the system**. I don't care if you're using VSCode, WebStorm or any other editor. Just choose and use your over the system. Firefox, Discord, Slack, ranger, Neovim, all this programs must use a _one theme_. My choice is Rose Pine Moon, as you can see.
 
 <br>
-<div align="center"><a href="https://rosepinetheme.com/palette"><img src="https://user-images.githubusercontent.com/101672047/164561552-a96a8a85-93b1-43b9-8508-197ca7046785.png"</a></div>
+<div align="center"><a href="https://rosepinetheme.com/palette"><img src="https://user-images.githubusercontent.com/101672047/164561552-a96a8a85-93b1-43b9-8508-197ca7046785.png"></a></div>
 
 ## Tools
 
