@@ -1,16 +1,7 @@
-# README
+# moonlord
 
-![image](https://user-images.githubusercontent.com/101672047/161741236-2ad3f012-81f7-4202-bb9a-e3d535c3c43f.png)
+| **Name?** | All dotfile's theme based on rose-pine moon theme. It's a game of words moon - from rose-pine, lord - I dunno 🤷. Also moonlord is a final boss from my favorite game - Terraria. |
+|--|--|
 
-Дефолтные конфигурации для программ на Linux.
-
-Уже существуют следующие конфигурации:
-
-| Программа  | Описание                                                     |
-| ---------- | ------------------------------------------------------------ |
-| Tmux       | Терминальный мультиплексер. Нужен для того чтобы в одном терминале пользоваться несколькими сессиями |
-| Neovim     | Консольный редактор                                          |
-| zsh        | Шелл для консоли                                             |
-| Xresources | Файл с темами для UXTerm, XTerm, URXvt                       |
-| kitty      | Терминал                                                     |
-|            |                                                              |
+|**Dotfiles?** |Dotfiles - is configuration for many utilities and programs. I'm coding only in terminal, also I do it in terminal, sooo, here is my configuration files :3|
+|-|-|
