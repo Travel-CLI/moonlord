@@ -36,3 +36,17 @@ You can talk about coding fonts for a long time, but you need to remember one th
 
 * Cascadia Code
 * JetBrainsMono Nerd Font
+
+## Tools
+
+If you are using terminal, then you know, that at many cases terminals are ugly (hey just look at initial XTerm trash theme :D), but I don't think so. Terminals can be gourgeous, beautiful and badass😎, just look at mine:
+
+<br>
+<div align="center"><img src="https://user-images.githubusercontent.com/101672047/164560088-74d366f7-2e9c-4a26-a927-976c0595d5d3.png"></div>
+<br>
+
+I've tried many (_you know, really many_) terminals and stack on [kitty](https://sw.kovidgoyal.net/kitty/). It's free, open source, easy to configurate and extendable. I have few rules for terminals:
+
+1. Terminal shouldn't be in fullscreen mode. Yep, you heard me. Fullscreen mode lacks control, you can't view other windows, in real world you're using not only terminal. Please be carefull with fullscreen mode.
+2. Terminal doesn't have a windows decorator **and that's ok**. If you are using terminal 90% of your work time, than why you should  minimize or close it. Just use Win + mouse to resize it and move the window.
+3. Terminal shouldn't replace all programs in your workflow. Seriously it isn't Emacs)) Just use it for editor, navigation and many other things, but don't try to browse the web, view pictures or any weird stuff.
