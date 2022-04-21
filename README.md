@@ -1,4 +1,8 @@
 # moonlord
+<br><br>
+<div align="center"><img src="https://user-images.githubusercontent.com/101672047/164524314-c1f5b38e-ef9d-45ce-846d-795de33674cc.png"></div>
+<br><br><br>
+
 | **Name?** | All dotfile's theme based on rose-pine moon theme. It's a game of words moon - from rose-pine, lord - I dunno 🤷. Also moonlord is a final boss from my favorite game - Terraria. |
 |--|--|
 
