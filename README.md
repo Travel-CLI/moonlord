@@ -3,12 +3,10 @@
 <div align="center"><img src="https://user-images.githubusercontent.com/101672047/164559309-3a8a5b9c-dbaf-4bea-9e7e-a36680ce5310.png"></div>
 <br><br><br>
 
-
-| **Name?** | All dotfile's theme based on rose-pine moon theme. It's a game of words moon - from rose-pine, lord - I dunno 🤷. Also moonlord is a final boss from my favorite game - Terraria. |
 |--|--|
-
+---|---
+| **Name?** | All dotfile's theme based on rose-pine moon theme. It's a game of words moon - from rose-pine, lord - I dunno 🤷. Also moonlord is a final boss from my favorite game - Terraria. |
 |**Dotfiles?** |Dotfiles - is configuration for many utilities and programs. I'm coding only in terminal, also I do it in terminal, sooo, here is my configuration files :3|
-|-|-|
 
 # Guideline
 > A man travels the world over in search of what he needs and returns home to find it.
