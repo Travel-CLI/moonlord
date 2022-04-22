@@ -57,3 +57,12 @@ I've tried many (_you know, really many_) terminals and stack on [kitty](https:/
 1. Terminal shouldn't be in fullscreen mode. Yep, you heard me. Fullscreen mode lacks control, you can't view other windows, in real world you're using not only terminal. Please be carefull with fullscreen mode.
 2. Terminal doesn't have a windows decorator **and that's ok**. If you are using terminal 90% of your work time, than why you should  minimize or close it. Just use Win + mouse to resize it and move the window.
 3. Terminal shouldn't replace all programs in your workflow. Seriously it isn't Emacs)) Just use it for editor, navigation and many other things, but don't try to browse the web, view pictures or any weird stuff.
+
+# Get the info
+
+## Awesome
+* http://epsi-rns.github.io/desktop/2019/06/15/awesome-overview.html
+* https://devhints.io/lua
+* https://wiki.archlinux.org/title/awesome
+* https://awesomewm.org/apidoc/documentation/07-my-first-awesome.md.html#
+* https://awesomewm.org/apidoc/index.html
