@@ -15,7 +15,7 @@
 
 ## Font
 
-<div align="center"><img src="https://user-images.githubusercontent.com/101672047/164993996-ce2f1d84-bce2-4f7b-ba0c-82e02f34abb2.png"></div>
+<div align="center"><img src="https://user-images.githubusercontent.com/101672047/164994089-fc453b19-6cf2-4251-83d0-22fa80d0e2d0.png"></div>
 <br><br>
 
 System fonts should be simple. They should be well readable and clear. If one of the fonts makes the user think, then this is not the best font for the system.
@@ -63,9 +63,6 @@ I've tried many (_you know, really many_) terminals and stack on [kitty](https:/
 <div align="center"><img src="https://user-images.githubusercontent.com/101672047/164994025-fcccfe5b-a05d-4e92-b758-cda0e72bdbf3.png"></div>
 <br>
 
-System must be stable, *not* rolling-release and easy to understand. I used many system, more over I've used arch for 3 years and now I'm very happy to say, that you must use system, that you use **now**. Don't jump from distro to distro, they all the same. Now I'm using Linux Mint (over 2 years) for work, study, entertainment. It's stable, fast, and very **very** user-friendly (thanks to Gods, that I am not configuring policy-kit and other stuff to make simple things work).
+System must be stable, *not* rolling-release and easy to understand. I used many system, more over I've used arch for 3 years and now I'm very happy to say, that you must use system, that you use **now**. Don't jump from distro to distro, they all the same. Now I'm using Ubuntu (over 2 years) for work, study, entertainment. It's stable, fast, and very **very** user-friendly (thanks to Gods, that I am not configuring policy-kit and other stuff to make simple things work).
 
 There is few tips for Linux Mint, but you may them on your system too (because all distros are the same :3)
-
-### EarlyOOM
-You may have the following troubles: you turn on your system, all works like a charm. In the next few hours you're launching some IDE, some editors, some terminals and boom, your system is down. What's happening?

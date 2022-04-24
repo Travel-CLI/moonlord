@@ -121,12 +121,17 @@ return require('packer').startup(function()
 	vim.o.termguicolors = true
 	vim.o.background = "dark"
 
-	use {
-		'sainnhe/everforest',
+	use({
+		'rose-pine/neovim',
+		as = 'rose-pine',
+		tag = 'v1.*',
 		config = function()
-			vim.cmd [[color everforest]]
+			require('rose-pine').setup({
+				dark_variant = 'moon',
+			})
+			vim.cmd('colorscheme rose-pine')
 		end
-	}
+	})
 
 	-- Быстрый поиск Telescope
 	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
@@ -189,6 +194,15 @@ return require('packer').startup(function()
 		"rcarriga/vim-ultest",
 		requires = { "vim-test/vim-test" },
 		run = ":UpdateRemotePlugins",
+	}
+
+	-- Улучшенные комментарии
+	use {
+		"folke/todo-comments.nvim",
+		requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("todo-comments").setup {}
+		end
 	}
 
 	-- Плагин для подсветки синтаксиса
