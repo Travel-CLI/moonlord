@@ -15,7 +15,7 @@
 
 ## Font
 
-<div align="center"><img src="https://user-images.githubusercontent.com/101672047/164993711-65ec53ff-77bc-4349-b47b-ef9641317c73.png"></div>
+<div align="center"><img src="https://user-images.githubusercontent.com/101672047/164993996-ce2f1d84-bce2-4f7b-ba0c-82e02f34abb2.png"></div>
 <br><br>
 
 System fonts should be simple. They should be well readable and clear. If one of the fonts makes the user think, then this is not the best font for the system.
@@ -27,9 +27,9 @@ System fonts should be simple. They should be well readable and clear. If one of
   <li>Inter</li>
 </ul>
 
-<br><br>
-<div align="center"><img src="https://user-images.githubusercontent.com/101672047/164993879-bbebd39c-5e3c-475a-93a5-b8991c9f5fbd.png"></div>
-<br><br>
+<br>
+<div align="center"><img src="https://user-images.githubusercontent.com/101672047/164993948-88bc190d-c603-4e08-b908-8769f7016662.png"></div>
+<br>
 
 You can talk about coding fonts for a long time, but you need to remember one thing: coding fonts shouldn't be misleading and at the same time should be **very** readable. These are the two main rules and very few fonts that I have used meet them. The same Cartograph CF is not suitable for code at all, because its italics are misleading (God give me the strength to understand what is happening in the comments and keywords), although at first I thought it would be the best font that I used, so my favorite coding fonts are:
 
@@ -60,7 +60,7 @@ I've tried many (_you know, really many_) terminals and stack on [kitty](https:/
 ## System
 
 <br>
-<div align="center"><img src="https://user-images.githubusercontent.com/101672047/164993527-911a2efa-0cd1-481d-857a-41307b5f0c07.png"></div>
+<div align="center"><img src="https://user-images.githubusercontent.com/101672047/164994025-fcccfe5b-a05d-4e92-b758-cda0e72bdbf3.png"></div>
 <br>
 
 System must be stable, *not* rolling-release and easy to understand. I used many system, more over I've used arch for 3 years and now I'm very happy to say, that you must use system, that you use **now**. Don't jump from distro to distro, they all the same. Now I'm using Linux Mint (over 2 years) for work, study, entertainment. It's stable, fast, and very **very** user-friendly (thanks to Gods, that I am not configuring policy-kit and other stuff to make simple things work).
