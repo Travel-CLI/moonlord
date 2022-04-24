@@ -14,10 +14,9 @@
 > — George A. Moore
 
 ## Font
-<div align="center"><img src="https://user-images.githubusercontent.com/101672047/164513098-cc7232b5-eb7a-4f7a-b298-3f5246f7fa62.png"></div>
+
+<div align="center"><img src="https://user-images.githubusercontent.com/101672047/164993711-65ec53ff-77bc-4349-b47b-ef9641317c73.png"></div>
 <br><br>
-
-
 
 System fonts should be simple. They should be well readable and clear. If one of the fonts makes the user think, then this is not the best font for the system.
 
@@ -29,7 +28,7 @@ System fonts should be simple. They should be well readable and clear. If one of
 </ul>
 
 <br><br>
-<div align="center"><img src="https://user-images.githubusercontent.com/101672047/164520707-7fe3f612-c1f5-470e-82eb-f2f91df06b6f.png"></div>
+<div align="center"><img src="https://user-images.githubusercontent.com/101672047/164993879-bbebd39c-5e3c-475a-93a5-b8991c9f5fbd.png"></div>
 <br><br>
 
 You can talk about coding fonts for a long time, but you need to remember one thing: coding fonts shouldn't be misleading and at the same time should be **very** readable. These are the two main rules and very few fonts that I have used meet them. The same Cartograph CF is not suitable for code at all, because its italics are misleading (God give me the strength to understand what is happening in the comments and keywords), although at first I thought it would be the best font that I used, so my favorite coding fonts are:
@@ -58,11 +57,15 @@ I've tried many (_you know, really many_) terminals and stack on [kitty](https:/
 2. Terminal doesn't have a windows decorator **and that's ok**. If you are using terminal 90% of your work time, than why you should  minimize or close it. Just use Win + mouse to resize it and move the window.
 3. Terminal shouldn't replace all programs in your workflow. Seriously it isn't Emacs)) Just use it for editor, navigation and many other things, but don't try to browse the web, view pictures or any weird stuff.
 
-# Get the info
+## System
 
-## Awesome
-* http://epsi-rns.github.io/desktop/2019/06/15/awesome-overview.html
-* https://devhints.io/lua
-* https://wiki.archlinux.org/title/awesome
-* https://awesomewm.org/apidoc/documentation/07-my-first-awesome.md.html#
-* https://awesomewm.org/apidoc/index.html
+<br>
+<div align="center"><img src="https://user-images.githubusercontent.com/101672047/164993527-911a2efa-0cd1-481d-857a-41307b5f0c07.png"></div>
+<br>
+
+System must be stable, *not* rolling-release and easy to understand. I used many system, more over I've used arch for 3 years and now I'm very happy to say, that you must use system, that you use **now**. Don't jump from distro to distro, they all the same. Now I'm using Linux Mint (over 2 years) for work, study, entertainment. It's stable, fast, and very **very** user-friendly (thanks to Gods, that I am not configuring policy-kit and other stuff to make simple things work).
+
+There is few tips for Linux Mint, but you may them on your system too (because all distros are the same :3)
+
+### EarlyOOM
+You may have the following troubles: you turn on your system, all works like a charm. In the next few hours you're launching some IDE, some editors, some terminals and boom, your system is down. What's happening?
