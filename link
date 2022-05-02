@@ -9,3 +9,4 @@ ln -sf $PWD/Xresources/Xresources $HOME/.Xresources && echo "Linked Xresources c
 [ -d $HOME/.cache/Code/User ] && ln -sf $PWD/Xresources/settings.json $HOME/.cache/Code/User/settings.json || echo "No VSCode configuration folder!"
 ln -sf $PWD/tmux/tmux.conf $HOME/.tmux.conf && echo "Linked tmux config!" || echo "Some troubles with linking tmux!"
 ln -sf $PWD/zsh/zshrc $HOME/.zshrc && echo "Linked zshrc config!" || echo "Some troubles with linking zshrc!"
+ln -sf $PWD/git/gitconfig $HOME/.gitconfig && echo "Linked git config!" || echo "Some troubles with linking git!"

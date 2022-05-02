@@ -134,7 +134,7 @@ return require('packer').startup(function()
 	})
 
 	-- Быстрый поиск Telescope
-	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+	use { 'nvim-telescope/telescope-fzy-native.nvim'}
 
 	-- Поиск по файлам
 	use {
@@ -212,5 +212,4 @@ return require('packer').startup(function()
 			require('plugins/tree-sitter')
 		end
 	}
-
 end)

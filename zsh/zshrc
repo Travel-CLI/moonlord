@@ -4,8 +4,10 @@
 ### PATH VARIABLES ###
 ANTIGEN_PATH="$HOME/.config/antigen.zsh"                          # Path for antigen plugin manager
 CARGO_PATH="$HOME/.cargo/bin"                                     # Path for cargo (rust package manager binaries)
+PYTHON_PATH="$HOME/.local/bin"                                    # Path for python binaries
 NVM_DIR=~/.nvm                                                    # Path for NVM dir
 HISTFILE=~/.zsh_history                                           # File for history
+EDITOR="nvim"
 HISTSIZE=10000                                                    # Amount of saved command in history file
 SAVEHIST=10000                                                    # How many lines are remembered in one session
 setopt appendhistory                                              # Save history
@@ -13,6 +15,10 @@ setopt appendhistory                                              # Save history
 # Check if cargo exists
 if [ -d $CARGO_PATH ]; then
 	export PATH=$CARGO_PATH:$PATH                                 # Adding it into $PATH environment variable
+fi
+
+if [ -d $PYTHON_PATH ]; then
+	export PATH=$PYTHON_PATH:$PATH
 fi
 
 # Check if Antigen is downloaded
@@ -45,7 +51,7 @@ type exa &> /dev/null &&
 	antigen bundle DarrinTisdale/zsh-aliases-exa                  # Add exa alises
 
 
-antigen bundle reobin/typewritten@main                            # Typewritten theme
+antigen theme spaceship-prompt/spaceship-prompt
 antigen bundle zsh-users/zsh-autosuggestions                      # Autocomplete bundle
 
 # Tell Antigen that you're done
@@ -53,3 +59,5 @@ antigen apply
 
 # Add more alises
 alias ls="exa --icons"
+alias vimdiff="nvim -d"
+alias t="task"
