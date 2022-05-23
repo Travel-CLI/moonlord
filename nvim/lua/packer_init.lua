@@ -121,17 +121,27 @@ return require('packer').startup(function()
 	vim.o.termguicolors = true
 	vim.o.background = "dark"
 
-	use({
-		'rose-pine/neovim',
-		as = 'rose-pine',
-		tag = 'v1.*',
+	use {
+		'olimorris/onedarkpro.nvim',
 		config = function()
-			require('rose-pine').setup({
-				dark_variant = 'moon',
+			local onedarkpro = require("onedarkpro")
+			onedarkpro.setup({
+				styles = {
+					comments = "italic", -- Style that is applied to comments
+					keywords = "bold,italic", -- Style that is applied to keywords
+				},
+				options = {
+					bold = true, -- Use the themes opinionated bold styles?
+					italic = true, -- Use the themes opinionated italic styles?
+					underline = true, -- Use the themes opinionated underline styles?
+					undercurl = true -- Use the themes opinionated undercurl styles?
+				},
+				theme = "onedark",
 			})
-			vim.cmd('colorscheme rose-pine')
+
+			onedarkpro.load()
 		end
-	})
+	}
 
 	-- Быстрый поиск Telescope
 	use { 'nvim-telescope/telescope-fzy-native.nvim'}

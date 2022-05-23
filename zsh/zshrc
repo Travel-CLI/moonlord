@@ -51,7 +51,7 @@ type exa &> /dev/null &&
 	antigen bundle DarrinTisdale/zsh-aliases-exa                  # Add exa alises
 
 
-antigen theme spaceship-prompt/spaceship-prompt
+antigen bundle reobin/typewritten@main                            # Theme for the shell
 antigen bundle zsh-users/zsh-autosuggestions                      # Autocomplete bundle
 
 # Tell Antigen that you're done
