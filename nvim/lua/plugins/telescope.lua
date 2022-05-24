@@ -1,4 +1,4 @@
-local telescope = require('telescope')
+local telescope = require('telescope');
 
 telescope.setup({
 
@@ -6,6 +6,15 @@ telescope.setup({
 	defaults = {
 		prompt_prefix = '>> ',
 		selection_caret = '▶ ',
+	},
+
+	pickers = {
+		grep_string = {
+			layout_strategy = 'vertical',
+			layout_config = {
+				width=0.5
+			}
+		}
 	},
 
 	-- Расширения
@@ -18,5 +27,6 @@ telescope.setup({
         }
     }
 })
+
 -- Загружаем fzy
 require('telescope').load_extension('fzy_native')

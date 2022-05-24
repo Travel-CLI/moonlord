@@ -17,18 +17,26 @@ map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})             
 map('n', 'gf', '<cmd>lua vim.lsp.buf.formatting()<CR>', {noremap = true})                 -- Форматировать документ
 map('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<CR>', {noremap = true})                -- Действия с кодом
 map('n', 'gR', '<cmd>lua vim.lsp.buf.rename()<CR>', {noremap = true})                     -- Переименовать объект
-map('n', 'gd', '<cmd>Telescope lsp_definitions<CR>', {noremap = true})                    -- Объявления в LSP
-map('n', 'gr', '<cmd>Trouble lsp_references<CR>', {noremap = true})                       -- Референсы в LSP
 
 -- Плагины
 map('n', '<leader>v', '<cmd>NvimTreeToggle<CR>', {noremap = true})                        -- Открыть Neovim Tree
 
+map('n', 'gd', '<cmd>Telescope lsp_definitions<CR>', {noremap = true})                    -- Объявления в LSP
+map('n', 'gr', '<cmd>Trouble lsp_references<CR>', {noremap = true})                       -- Референсы в LSP
 map('n', '<leader>p', '<cmd>Telescope oldfiles<CR>', {noremap = true})                    -- Просмотр недавних файлов
 map('n', '<leader>o', '<cmd>Telescope git_files<CR>', {noremap = true})                   -- Поиск файлов
 map('n', '<leader>b', '<cmd>Telescope git_branches<CR>', {noremap = true})                -- Ветки в Git
-map('n', '<leader>f', '<cmd>Telescope live_grep<CR>', {noremap = true})                   -- Поиск строки
+map('n', '<leader>f', '<cmd>Telescope grep_string<CR>', {noremap = true})                   -- Поиск строки
 map('n', '<leader>q', '<cmd>Telescope buffers<CR>', {noremap = true})                     -- Буфферы
 map('n', '<leader>l', '<cmd>Telescope git_status<CR>', {noremap = true})                  -- Изменения в Git
+
+--[[
+map('n', '<leader>p', '<cmd>Clap recent_files<CR>', {noremap = true})                     -- Просмотр недавних файлов
+map('n', '<leader>o', '<cmd>Clap git_files<CR>', {noremap = true})                        -- Поиск файлов
+map('n', '<leader>q', '<cmd>Clap buffers<CR>', {noremap = true})                          -- Буфферы
+map('n', '<leader>f', '<cmd>Clap grep2<CR>', {noremap = true})                            -- Поиск строки
+]]
+
 
 map('n', '<leader>s', '<cmd>SymbolsOutline<CR>', {noremap = true})                        -- Структура для файла
 

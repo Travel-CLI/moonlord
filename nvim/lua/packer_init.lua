@@ -59,6 +59,7 @@ return require('packer').startup(function()
 			'hrsh7th/cmp-vsnip',
 			'hrsh7th/cmp-nvim-lsp',
 			'hrsh7th/cmp-path',
+			'hrsh7th/cmp-emoji',
 			'hrsh7th/cmp-nvim-lsp-signature-help'
 		},
 		config = function()
@@ -154,6 +155,16 @@ return require('packer').startup(function()
 			require('plugins/telescope')
 		end
 	}
+
+	--[[
+	use {
+		'liuchengxu/vim-clap',
+		run = ':call clap#installer#download_binary()',
+		config = function()
+			vim.cmd [[let g:clap_theme = 'material_design_dark']]
+		-- end
+	-- }
+	--]]
 
 	-- Проводник
 	use {
