@@ -20,9 +20,9 @@ return require('packer').startup(function()
 		config = function()
 			require('fidget').setup({
 				text = {
-					spinner = "moon",
-					commenced = "Погнали",
-					completed = "Готово!"
+					spinner = "star",
+					commenced = "Запускаю гусей🦆🦆🦆",
+					completed = "Гуси готовы автодополнять🦆"
 				},
 				align = {
 					bottom = false
@@ -43,24 +43,17 @@ return require('packer').startup(function()
 		end,
 	}
 
-	-- Скроллбар
-	use {
-		"petertriho/nvim-scrollbar",
-		config = function()
-			require("scrollbar").setup();
-		end
-	}
-
 	-- Автодополнение
 	use {
 		'hrsh7th/nvim-cmp',
 		requires = {
-			'hrsh7th/vim-vsnip',
-			'hrsh7th/cmp-vsnip',
+			'L3MON4D3/LuaSnip',
+			'saadparwaiz1/cmp_luasnip',
 			'hrsh7th/cmp-nvim-lsp',
 			'hrsh7th/cmp-path',
 			'hrsh7th/cmp-emoji',
-			'hrsh7th/cmp-nvim-lsp-signature-help'
+			'hrsh7th/cmp-nvim-lsp-signature-help',
+			'hrsh7th/cmp-nvim-lua'
 		},
 		config = function()
 			require('plugins/cmp')
@@ -144,27 +137,14 @@ return require('packer').startup(function()
 		end
 	}
 
-	-- Быстрый поиск Telescope
-	use { 'nvim-telescope/telescope-fzy-native.nvim'}
-
-	-- Поиск по файлам
+	-- Вместо Telescope используем fzf😁
+	-- WARN: Обязательно перед использованием убедиться, что есть FZF > 0.25
 	use {
-		'nvim-telescope/telescope.nvim',
-		requires = { { 'nvim-lua/plenary.nvim' } },
-		config = function()
-			require('plugins/telescope')
-		end
+		'ibhagwan/fzf-lua',
+		-- optional for icon support
+		requires = { 'kyazdani42/nvim-web-devicons' }
 	}
 
-	--[[
-	use {
-		'liuchengxu/vim-clap',
-		run = ':call clap#installer#download_binary()',
-		config = function()
-			vim.cmd [[let g:clap_theme = 'material_design_dark']]
-		-- end
-	-- }
-	--]]
 
 	-- Проводник
 	use {
