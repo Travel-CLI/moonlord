@@ -133,7 +133,17 @@ return require('packer').startup(function()
 				theme = "onedark",
 			})
 
-			onedarkpro.load()
+			-- onedarkpro.load()
+		end
+	}
+
+	use {
+		'sainnhe/sonokai',
+		config = function ()
+			vim.cmd[[
+			let g:sonokai_style = 'shusia'
+			color sonokai
+			]]
 		end
 	}
 
