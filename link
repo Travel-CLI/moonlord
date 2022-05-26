@@ -3,6 +3,7 @@
 # Link some programs (folders)
 ln -sf $PWD/nvim $HOME/.config/ && echo "Linked Neovim config!" || echo "You don't have neovim configuration folder!"
 ln -sf $PWD/kitty $HOME/.config/ && echo "Linked kitty config!" || echo "You don't have kitty configuration folder!"
+ln -sf $PWD/alacritty/ $HOME/.config/ && echo "Linked alacritty config!" || echo "You don't have alacritty configuration folder!"
 
 # Link some programs (files)
 ln -sf $PWD/Xresources/Xresources $HOME/.Xresources && echo "Linked Xresources config!" || echo "Some troubles with linking Xresources!"

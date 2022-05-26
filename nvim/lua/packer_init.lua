@@ -158,12 +158,13 @@ return require('packer').startup(function()
 
 	-- Проводник
 	use {
-		'kyazdani42/nvim-tree.lua',
+		'ms-jpq/chadtree',
 		requires = {
 			'kyazdani42/nvim-web-devicons', -- optional, for file icon
 		},
+		run = 'python3 -m chadtree deps',
 		config = function()
-			require('plugins/nvimtree')
+			require('plugins/chadtree')
 		end
 	}
 

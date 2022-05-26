@@ -19,8 +19,8 @@ map('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<CR>', {noremap = true})      
 map('n', 'gR', '<cmd>lua vim.lsp.buf.rename()<CR>', {noremap = true})                     -- Переименовать объект
 
 -- Плагины
--- NvimTree
-map('n', '<leader>v', '<cmd>NvimTreeToggle<CR>', {noremap = true})                        -- Открыть Neovim Tree
+-- ChadTree
+map('n', '<leader>v', '<cmd>CHADopen<CR>', {noremap = true})                              -- Открыть CHADOpen
 
 -- LEGACY: Более не используем Telescope
 -- INFO: Вместо Telescope теперь используется FzfLua
