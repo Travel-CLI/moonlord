@@ -47,8 +47,9 @@ antigen bundle git                                                # Load git ohm
 antigen bundle zsh-users/zsh-syntax-highlighting                  # Syntax highlighting bundle
 
 # Add exa aliases, if exa exists
-type exa &> /dev/null &&
+if [ -f $HOME/.cargo/bin/exa &> /dev/null ]; then
 	antigen bundle DarrinTisdale/zsh-aliases-exa                  # Add exa alises
+fi
 
 
 antigen bundle reobin/typewritten@main                            # Theme for the shell
@@ -58,6 +59,5 @@ antigen bundle zsh-users/zsh-autosuggestions                      # Autocomplete
 antigen apply
 
 # Add more alises
-alias ls="exa --icons"
 alias vimdiff="nvim -d"
 alias t="task"
